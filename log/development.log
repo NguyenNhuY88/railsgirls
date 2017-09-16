@@ -761,3 +761,121 @@ Processing by PagesController#info as HTML
 Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/pages/info" for 118.70.81.90 at 2017-09-16 09:08:08 +0000
+Cannot render console from 118.70.81.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#info as HTML
+  Rendering pages/info.html.erb within layouts/application
+  Rendered pages/info.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 38ms (Views: 36.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ideas" for 118.70.81.90 at 2017-09-16 09:08:18 +0000
+Cannot render console from 118.70.81.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.9ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  Rendered ideas/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 34ms (Views: 30.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/ideas/3/edit" for 118.70.81.90 at 2017-09-16 09:12:11 +0000
+Cannot render console from 118.70.81.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mIdea Load (0.4ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering ideas/edit.html.erb within layouts/application
+  Rendered ideas/_form.html.erb (4.9ms)
+  Rendered ideas/edit.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 51ms (Views: 45.6ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/ideas/3" for 118.70.81.90 at 2017-09-16 09:12:49 +0000
+Cannot render console from 118.70.81.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/q/MgMFkbXWcCtHJRODDpAJ+0RaCsTfnoYnDAavNPTL6hgN0xiKel9Dwrt1H70q7pdOp0zystckA4ZWN8Zon/A==", "idea"=>{"name"=>"Le ", "description"=>"123", "picture"=>#<ActionDispatch::Http::UploadedFile:0x000000048a8b40 @tempfile=#<Tempfile:/tmp/RackMultipart20170916-21023-168vmad.jpg>, @original_filename="2016-05-03 16.55.17.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"idea[picture]\"; filename=\"2016-05-03 16.55.17.jpg\"\r\nContent-Type: image/jpeg\r\n">, "birthday"=>"2/2/2000"}, "commit"=>"Update Idea", "id"=>"3"}
+  [1m[36mIdea Load (0.3ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (5.9ms)[0m  [1m[33mUPDATE "ideas" SET "picture" = ?, "updated_at" = ? WHERE "ideas"."id" = ?[0m  [["picture", "2016-05-03_16.55.17.jpg"], ["updated_at", "2017-09-16 09:12:49.320128"], ["id", 3]]
+  [1m[35m (15.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://nguyennhuy-nguyennhuy.c9users.io/ideas/3
+Completed 302 Found in 42ms (ActiveRecord: 21.5ms)
+
+
+Started GET "/ideas/3" for 118.70.81.90 at 2017-09-16 09:12:50 +0000
+Cannot render console from 118.70.81.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering ideas/show.html.erb within layouts/application
+  Rendered ideas/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 44ms (Views: 41.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas" for 118.70.81.90 at 2017-09-16 09:12:55 +0000
+Cannot render console from 118.70.81.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.4ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  Rendered ideas/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 34ms (Views: 31.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/ideas/3/edit" for 118.70.81.90 at 2017-09-16 09:13:04 +0000
+Cannot render console from 118.70.81.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering ideas/edit.html.erb within layouts/application
+  Rendered ideas/_form.html.erb (4.4ms)
+  Rendered ideas/edit.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 33ms (Views: 30.4ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/ideas/3" for 118.70.81.90 at 2017-09-16 09:13:22 +0000
+Cannot render console from 118.70.81.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ai1nzOT1b6IfQHOtZtIKC/NEpS9MZ49jAdSFxIWuEC9uBKg447OcQFO6DLll3YMUVOnd6vJ6DU2gvNNI3/kK4Q==", "idea"=>{"name"=>"Le ", "description"=>"123", "picture"=>#<ActionDispatch::Http::UploadedFile:0x007fd6b43093e0 @tempfile=#<Tempfile:/tmp/RackMultipart20170916-21023-wl6yld.jpg>, @original_filename="2016-05-03 16.56.27.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"idea[picture]\"; filename=\"2016-05-03 16.56.27.jpg\"\r\nContent-Type: image/jpeg\r\n">, "birthday"=>"2/2/2000"}, "commit"=>"Update Idea", "id"=>"3"}
+  [1m[36mIdea Load (0.4ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "ideas" SET "picture" = ?, "updated_at" = ? WHERE "ideas"."id" = ?[0m  [["picture", "2016-05-03_16.56.27.jpg"], ["updated_at", "2017-09-16 09:13:22.738569"], ["id", 3]]
+  [1m[35m (11.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://nguyennhuy-nguyennhuy.c9users.io/ideas/3
+Completed 302 Found in 138ms (ActiveRecord: 12.7ms)
+
+
+Started GET "/ideas/3" for 118.70.81.90 at 2017-09-16 09:13:22 +0000
+Cannot render console from 118.70.81.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering ideas/show.html.erb within layouts/application
+  Rendered ideas/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 26ms (Views: 23.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas" for 118.70.81.90 at 2017-09-16 09:13:27 +0000
+Cannot render console from 118.70.81.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.3ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  Rendered ideas/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 84ms (Views: 81.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/ideas" for 118.70.81.90 at 2017-09-16 09:15:31 +0000
+Cannot render console from 118.70.81.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.5ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  Rendered ideas/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 48ms (Views: 44.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pages/info" for 118.70.81.90 at 2017-09-16 09:15:34 +0000
+Cannot render console from 118.70.81.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#info as HTML
+  Rendering pages/info.html.erb within layouts/application
+  Rendered pages/info.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 31ms (Views: 28.8ms | ActiveRecord: 0.0ms)
+
+
